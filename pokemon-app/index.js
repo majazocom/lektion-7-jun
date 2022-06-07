@@ -31,6 +31,10 @@ const pokemons = [{
 ];
 const list = document.querySelector('ul');
 
+for (let pokemon in pokemons) {
+    console.log(pokemon);
+}
+
 for (let pokemon of pokemons) {
     let newElement = `<li class="poke">${pokemon.name}, (${pokemon.id})</li>`;
     //beforebegin - innan target-elementet
