@@ -11,8 +11,11 @@ for (let i = 0; i < buttonList.length; i++) {
     if (targetValue == "=") {
         //då vill vi summera allt i input-fältet
         btnElement.addEventListener('click', function() {
-            let result = eval(inputField.value);
-            inputField.value = result;
+            //kollar så att inout inte är tomt för då får vi undefined
+            if (inputField.value !== "") {
+                let result = eval(inputField.value);
+                inputField.value = result;
+            }
         })
 
     } else if (targetValue == "c") {
